@@ -22,10 +22,6 @@ This will download all the dependencies for our app and set up the database.
 
 ## Instructions
 
-There are two failing RSpec specs in this lesson; you can find them in
-`spec/requests/student_spec.rb`. Make sure they pass without breaking the other
-tests. To complete this section, all specs should pass.
-
 In this lab, we'll add the last feature to our student management app. You will
 need to integrate the following scenario in your application:
 
@@ -35,7 +31,11 @@ need to integrate the following scenario in your application:
 2. The application should render the values from the student record with the
    corresponding ID in the database.
 
-You can try out your solution by running `rails s` and visiting `localhost:3000/students/2` in the browser. Then, run `learn test` to and make sure the tests are passing as well!
+You can try out your solution by running `rails s` and visiting `localhost:3000/students/2` in the browser.
+
+There are two failing RSpec specs in this lesson; you can find them in
+`spec/requests/student_spec.rb`. Make sure they pass without breaking the other
+tests. To complete this section, all specs should pass by running `learn test`.
 
 ## Resources
 
