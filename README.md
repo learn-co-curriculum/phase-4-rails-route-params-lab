@@ -39,7 +39,8 @@ tests. To complete this lesson, all specs should pass by running `learn test`.
 
 ## Bonus: Query Params
 
-If you've used other APIs, or investigated some URLs as you've browsed the internet, you may have noticed some URLs have this special syntax:
+If you've used other APIs, or investigated some URLs as you've browsed the
+internet, you may have noticed some URLs have this special syntax:
 
 ```txt
 https://www.google.com/search?q=bread
@@ -54,7 +55,8 @@ so:
 /students?key1=value1&key2=value2
 ```
 
-Rails gives us access to these query string parameters as part of the params hash:
+Rails gives us access to these query string parameters as part of the params
+hash:
 
 ```rb
 params
