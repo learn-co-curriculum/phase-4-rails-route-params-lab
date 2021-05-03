@@ -48,14 +48,11 @@ RSpec.describe "Students", type: :request do
     end
 
     context 'with query params', skip: "bonus" do
-      it 'returns students in the order specified by the query params' do
-        get '/students?sort=last_name&order=asc'
+      it 'returns students whose first or last name matches the query' do
+        get '/students?name=kirby'
 
         expect(response.body).to include_json([
-          { first_name: 'Idris', last_name: 'Elba', grade: 105 },
-          { first_name: 'Dwayne', last_name: 'Johnson', grade: 99 },
-          { first_name: 'Vanessa', last_name: 'Kirby', grade: 85 },
-          { first_name: 'Jason', last_name: 'Statham', grade: 70 }
+          { first_name: 'Vanessa', last_name: 'Kirby', grade: 85 }
         ])
       end
     end
