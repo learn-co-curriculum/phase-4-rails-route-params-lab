@@ -35,9 +35,43 @@ You can try out your solution by running `rails s` and visiting `localhost:3000/
 
 There are two failing RSpec specs in this lesson; you can find them in
 `spec/requests/student_spec.rb`. Make sure they pass without breaking the other
-tests. To complete this section, all specs should pass by running `learn test`.
+tests. To complete this lesson, all specs should pass by running `learn test`.
+
+## Bonus: Query Params
+
+If you've used other APIs, or investigated some URLs as you've browsed the internet, you may have noticed some URLs have this special syntax:
+
+```txt
+https://www.google.com/search?q=bread
+```
+
+That `?q=bread` portion of the URL is known as a
+[**query string parameters**][query params]. Query string parameters are another
+way of providing data in a request. They're structured as key-value pairs, like
+so:
+
+```txt
+/students?key1=value1&key2=value2
+```
+
+Rails gives us access to these query string parameters as part of the params hash:
+
+```rb
+params
+# => { key1: "value1", key2: "value2" }
+```
+
+As a bonus deliverable:
+
+1. Use query params in the `index` action to customize the sorting order.
+
+You'll need to update the `spec/requests/students_spec.rb` file to run the tests
+for the bonus deliverable. Just remove the `skip: "bonus"` to run the bonus
+tests.
 
 ## Resources
 
 - [Rails Guides on Routing](https://guides.rubyonrails.org/routing.html)
 - [Routing API Documentation](http://api.rubyonrails.org/classes/ActionDispatch/Routing.html)
+
+[query params]: https://en.wikipedia.org/wiki/Query_string
