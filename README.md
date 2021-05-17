@@ -8,7 +8,7 @@
 ## Introduction
 
 We'll continue building our API for viewing student data. In this lesson, we'll
-add some a route and controller action for displaying data about one individual
+add a route and controller action for displaying data about one individual
 student.
 
 To get set up, run:
@@ -47,7 +47,7 @@ https://www.google.com/search?q=bread
 ```
 
 That `?q=bread` portion of the URL is known as a
-[**query string parameters**][query params]. Query string parameters are another
+[**query string parameter**][query params]. Query string parameters are another
 way of providing data in a request. They're structured as key-value pairs, like
 so:
 
@@ -65,11 +65,10 @@ params
 
 As a bonus deliverable:
 
-1. Use query params in the `index` action to customize the sorting order.
+**Un-comment out the last test in `/spec/requests/students_spec.rb` to complete the bonus.**
 
-You'll need to update the `spec/requests/students_spec.rb` file to run the tests
-for the bonus deliverable. Just remove the `skip: "bonus"` to run the bonus
-tests.
+1. Use query params in the `index` action to return a list of all students whose
+   first or last name matches the query parameter.
 
 ## Resources
 
