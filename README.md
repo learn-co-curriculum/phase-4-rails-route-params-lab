@@ -13,9 +13,9 @@ student.
 
 To get set up, run:
 
-```sh
-bundle install
-rails db:migrate db:seed
+```console
+$ bundle install
+$ rails db:migrate db:seed
 ```
 
 This will download all the dependencies for our app and set up the database.
@@ -31,7 +31,8 @@ need to integrate the following scenario in your application:
 2. The application should render the values from the student record with the
    corresponding ID in the database.
 
-You can try out your solution by running `rails s` and visiting `localhost:3000/students/2` in the browser.
+You can try out your solution by running `rails s` and visiting
+`localhost:3000/students/2` in the browser.
 
 There are two failing RSpec specs in this lesson; you can find them in
 `spec/requests/student_spec.rb`. Make sure they pass without breaking the other
