@@ -1,6 +1,11 @@
 class StudentsController < ApplicationController
   def index
-    students = Student.all
+    students = if params[:name]
+                 Student.where('LOWER(last_name) = LOWER(?) OR LOWER(first_name) = LOWER(?)', params[:name],
+                               params[:name])
+               else
+                 Student.all
+               end
     render json: students
   end
 
